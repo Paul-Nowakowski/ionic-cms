@@ -28,6 +28,7 @@ import { UserProvider } from '../providers/user/user';
   entryComponents: [
     MyApp,
     HomePage,
+    UsersPage,
     ListPage
   ],
   providers: [
