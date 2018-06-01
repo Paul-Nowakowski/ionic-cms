@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
-
+import { UserCreatePage } from '../user-create/user-create';
 import { User } from '../../models/user/user';
 import { UserProvider } from '../../providers/user/user';
+import { UserPage } from '../user/user';
 /**
  * Generated class for the UsersPage page.
  *
@@ -48,4 +49,11 @@ private loader: any;
     });
     this.loader.present();
   }
+  public toUser(id: string): void{
+this.navCtrl.push(UserPage, { id: id });
+  }
+public toCreateUser(): void{
+  this.navCtrl.push(UserCreatePage);
+}
+
 }
